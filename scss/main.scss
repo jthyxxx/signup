@@ -1,0 +1,353 @@
+*{
+    box-sizing: border-box;;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "NorseBold";
+    src: url("../Norse-Bold.otf");
+}
+
+$darkerColor: rgb(28, 12, 91);
+$darkColor: rgb(61, 44, 141);
+$lighterColor: rgb(145, 107, 191);
+$lightColor: rgb(201, 150, 204);
+
+#container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: linear-gradient(45deg, rgba(28,12,91,1) 0%, rgba(61,44,141,1) 48%, rgba(160,137,187,1) 100%);
+}
+
+.left{
+    width: 35vw;
+    height: 100vh;
+    
+    .imgBg{
+        width: 35vw;
+        height: 100vh;
+        object-fit: fill;
+    }
+
+    .odinLogo{
+        height: 13vh;
+        width: 35vw;
+        position: absolute;
+        background-color: rgba(201, 150, 204,0.5);
+        top: 18rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 10vh;
+            width: 5vw;
+            filter: invert(50%) sepia(74%) saturate(7441%) hue-rotate(258deg) brightness(25%) contrast(100%);
+        }
+
+        h1{
+            color: $darkerColor;
+            font-family: "NorseBold";
+            font-size: 6rem;
+        }
+    }
+}
+
+.right{
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .right-head{
+        font-family: "NorseBold";
+        font-size: 2.5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        h1{
+            max-width: 90%;
+            color: $lightColor;
+        }
+    }
+
+    .right-sub{
+        margin-top: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        h2{
+            max-width: 90%;
+            color: $darkerColor;
+        }
+    }
+
+    .right-message{
+        font-family: "NorseBold";
+        text-align: left;
+        margin-top: 3em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-size: 2.5rem;
+        color: $lightColor;
+    }
+}
+
+
+.formContainer{
+    margin: 2.5em;
+    form{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        font-family: 'Courier New', Courier, monospace;
+        color: $lightColor;
+        gap: 1em;
+        .form-first,.form-second,.form-third{
+            display: flex;
+            gap: min(5em, 5vw );
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+            }
+        }
+
+        input{
+            width: min(25vw, 300px);
+            height: 2.8vh;
+            background-color: $lightColor;
+            border: none;
+            font-family: 'Courier New', Courier, monospace;
+            color: $darkerColor;
+            font-size: 1rem;
+            &:focus{
+                border: none;
+                outline: none;
+            }
+
+        }
+        
+        /* #email{
+            &:invalid{
+                border: 3px solid red;
+            }
+
+            &:valid{
+                border: 3px solid green;
+            }
+        } */
+
+    }
+
+    
+    button{
+        height: 3.5vh;
+        width: 100px;
+        border-radius: 5px;
+        border: none;
+        background: $lightColor;
+        color: $darkerColor;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+
+        &:active{
+            border: 2px solid $darkColor;
+        }
+    }
+
+    h4{
+        visibility: hidden;
+        color: red;
+        font-size: 1rem;
+    }
+
+    h3{
+        margin-top: .5em;
+        font-family: 'Courier New', Courier, monospace;
+        color: $lighterColor;
+        a{
+            text-decoration: none;
+            color: $lighterColor;
+            
+            &:visited{
+                color: violet;
+            } 
+        }
+    }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+box-shadow: 0 0 0 1000px $lightColor inset !important;
+-webkit-text-fill-color: $darkerColor !important;
+            }
+
+@media screen and (max-width: 600px) {
+
+    #container{
+        flex-direction: column;
+        overflow: scroll;
+        background: linear-gradient(45deg, rgba(28,12,91,1) 0%, rgba(61,44,141,1) 48%, rgba(160,137,187,1) 100%);
+    }
+
+    .top{
+        width: 100vw;
+        height: 15vh;
+        position: relative;
+
+        .imgBg{
+            width: 100vw;
+            height: 15vh;
+            object-fit: fill;
+        }
+
+        .odinLogo{
+            height: 8vh;
+            width: 100vw;
+            position: absolute;
+            background-color: rgba(201, 150, 204,0.5);
+            top: 3.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                height: 7vh;
+                width: 5vw;
+                filter: invert(50%) sepia(74%) saturate(7441%) hue-rotate(258deg) brightness(25%) contrast(100%);
+            }
+    
+            h1{
+                color: $darkerColor;
+                font-family: "NorseBold";
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .bottom{
+        width: 100vw;
+        height: 100vh;
+
+        .bottom-head{
+            font-family: "NorseBold";
+            font-size: 1.5rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            h1{
+                width: 90%;
+                color: $lightColor;
+            }
+        }
+    
+        .bottom-sub{
+            margin-top: 1em;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: .65rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            h2{
+                width: 90%;
+                color: $darkerColor;
+            }
+        }
+    
+        .bottom-message{
+            font-family: "NorseBold";
+            text-align: center;
+            margin-top: 1.5em;
+            margin-left: 1.2em;
+            margin-right: 1.2em;
+            font-size: 1.5rem;
+            color: $lightColor;
+            display: flex;
+            justify-content: center;
+            h3{
+                width: 90%;
+            }
+        }
+    }
+    
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        form{
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.1rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: $lightColor;
+            gap: .5em;
+            .form-first,.form-second,.form-third{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: min(5em, 5vw );
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: .25rem;
+                }
+            }
+    
+            input{
+                width: min(80vw, 300px);
+                height: 2.8vh;
+                background-color: $lightColor;
+                border: none;
+                font-family: 'Courier New', Courier, monospace;
+                color: $darkerColor;
+                font-size: 1rem;
+                &:focus{
+                    outline-color: $lightColor;
+                }
+                
+            }
+        }
+    
+        h4{
+            font-size: .7rem;
+            color: red;
+        }
+
+        button{
+            height: 3.5vh;
+            width: 100px;
+            border-radius: 5px;
+            border: none;
+            background: $lightColor;
+            color: $darkerColor;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
+    
+        h3{
+            margin-top: .5em;
+            font-family: 'Courier New', Courier, monospace;
+            color: $lighterColor;
+            font-size: .8rem;
+            margin-bottom: .5em;
+            a{
+                text-decoration: none;
+                color: $lighterColor;
+                
+                &:visited{
+                    color: violet;
+                } 
+            }
+        }
+    }
+}

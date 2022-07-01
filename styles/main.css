@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "NorseBold";
+  src: url("../Norse-Bold.otf");
+}
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(45deg, rgb(28, 12, 91) 0%, rgb(61, 44, 141) 48%, rgb(160, 137, 187) 100%);
+}
+
+.left {
+  width: 35vw;
+  height: 100vh;
+}
+.left .imgBg {
+  width: 35vw;
+  height: 100vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.left .odinLogo {
+  height: 13vh;
+  width: 35vw;
+  position: absolute;
+  background-color: rgba(201, 150, 204, 0.5);
+  top: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left .odinLogo img {
+  height: 10vh;
+  width: 5vw;
+  filter: invert(50%) sepia(74%) saturate(7441%) hue-rotate(258deg) brightness(25%) contrast(100%);
+}
+.left .odinLogo h1 {
+  color: rgb(28, 12, 91);
+  font-family: "NorseBold";
+  font-size: 6rem;
+}
+
+.right {
+  width: 65vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.right .right-head {
+  font-family: "NorseBold";
+  font-size: 2.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.right .right-head h1 {
+  max-width: 90%;
+  color: rgb(201, 150, 204);
+}
+.right .right-sub {
+  margin-top: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.right .right-sub h2 {
+  max-width: 90%;
+  color: rgb(28, 12, 91);
+}
+.right .right-message {
+  font-family: "NorseBold";
+  text-align: left;
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 2.5rem;
+  color: rgb(201, 150, 204);
+}
+
+.formContainer {
+  margin: 2.5em;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(201, 150, 204);
+  gap: 1em;
+  /* #email{
+      &:invalid{
+          border: 3px solid red;
+      }
+
+      &:valid{
+          border: 3px solid green;
+      }
+  } */
+}
+.formContainer form .form-first, .formContainer form .form-second, .formContainer form .form-third {
+  display: flex;
+  gap: min(5em, 5vw);
+}
+.formContainer form .form-first div, .formContainer form .form-second div, .formContainer form .form-third div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.formContainer form input {
+  width: min(25vw, 300px);
+  height: 2.8vh;
+  background-color: rgb(201, 150, 204);
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(28, 12, 91);
+  font-size: 1rem;
+}
+.formContainer form input:focus {
+  border: none;
+  outline: none;
+}
+.formContainer button {
+  height: 3.5vh;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(201, 150, 204);
+  color: rgb(28, 12, 91);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+}
+.formContainer button:active {
+  border: 2px solid rgb(61, 44, 141);
+}
+.formContainer h4 {
+  visibility: hidden;
+  color: red;
+  font-size: 1rem;
+}
+.formContainer h3 {
+  margin-top: 0.5em;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(145, 107, 191);
+}
+.formContainer h3 a {
+  text-decoration: none;
+  color: rgb(145, 107, 191);
+}
+.formContainer h3 a:visited {
+  color: violet;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px rgb(201, 150, 204) inset !important;
+  -webkit-text-fill-color: rgb(28, 12, 91) !important;
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    flex-direction: column;
+    overflow: scroll;
+    background: linear-gradient(45deg, rgb(28, 12, 91) 0%, rgb(61, 44, 141) 48%, rgb(160, 137, 187) 100%);
+  }
+
+  .top {
+    width: 100vw;
+    height: 15vh;
+    position: relative;
+  }
+  .top .imgBg {
+    width: 100vw;
+    height: 15vh;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .top .odinLogo {
+    height: 8vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(201, 150, 204, 0.5);
+    top: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .top .odinLogo img {
+    height: 7vh;
+    width: 5vw;
+    filter: invert(50%) sepia(74%) saturate(7441%) hue-rotate(258deg) brightness(25%) contrast(100%);
+  }
+  .top .odinLogo h1 {
+    color: rgb(28, 12, 91);
+    font-family: "NorseBold";
+    font-size: 3rem;
+  }
+
+  .bottom {
+    width: 100vw;
+    height: 100vh;
+  }
+  .bottom .bottom-head {
+    font-family: "NorseBold";
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .bottom .bottom-head h1 {
+    width: 90%;
+    color: rgb(201, 150, 204);
+  }
+  .bottom .bottom-sub {
+    margin-top: 1em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.65rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .bottom .bottom-sub h2 {
+    width: 90%;
+    color: rgb(28, 12, 91);
+  }
+  .bottom .bottom-message {
+    font-family: "NorseBold";
+    text-align: center;
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    font-size: 1.5rem;
+    color: rgb(201, 150, 204);
+    display: flex;
+    justify-content: center;
+  }
+  .bottom .bottom-message h3 {
+    width: 90%;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formContainer form {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(201, 150, 204);
+    gap: 0.5em;
+  }
+  .formContainer form .form-first, .formContainer form .form-second, .formContainer form .form-third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(5em, 5vw);
+  }
+  .formContainer form .form-first div, .formContainer form .form-second div, .formContainer form .form-third div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .formContainer form input {
+    width: min(80vw, 300px);
+    height: 2.8vh;
+    background-color: rgb(201, 150, 204);
+    border: none;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(28, 12, 91);
+    font-size: 1rem;
+  }
+  .formContainer form input:focus {
+    outline-color: rgb(201, 150, 204);
+  }
+  .formContainer h4 {
+    font-size: 0.7rem;
+    color: red;
+  }
+  .formContainer button {
+    height: 3.5vh;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(201, 150, 204);
+    color: rgb(28, 12, 91);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+  }
+  .formContainer h3 {
+    margin-top: 0.5em;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(145, 107, 191);
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+  }
+  .formContainer h3 a {
+    text-decoration: none;
+    color: rgb(145, 107, 191);
+  }
+  .formContainer h3 a:visited {
+    color: violet;
+  }
+}

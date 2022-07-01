@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/styles/main.css"/>
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="left top">
+        <img
+          class="imgBg"
+          src="https://i.pinimg.com/originals/2e/8b/01/2e8b013bd630c641a88951f8182e27a6.jpg"
+        />
+        <div class="odinLogo">
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+          />
+          <h1>ODIN</h1>
+        </div>
+      </div>
+      <div class="right bottom">
+        <div class="right-head bottom-head"><h1>BE PART OF THE CLUB</h1></div>
+        <div class="right-sub bottom-sub"><h2>"Coding Club is a place that brings people together, regardless of
+            their gender or background!"</h2></div>
+        <div class="right-message bottom-message"><h3>Let's do this!</h3></div>
+        <div class="formContainer">
+            <form action="#" method="get">
+                <div class="form-first">
+                  <div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firsName" required />
+                  </div>
+                  <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required/>
+                  </div>
+                </div>
+                <div class="form-second">
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div>
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" minlength="11" maxlength="11" placeholder="09#########" required/>
+                  </div>
+                </div>
+                <div class="form-third">
+                  <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required/>
+                  </div>
+                      <div>
+                      <label for="repeatPassword">Repeat Password</label>
+                      <input type="password" id="repeatPassword" name="repeatPassword" required/>
+                    </div>
+                  </div>
+                  <h4 class="passwordNot">Password do not match</h4>
+                  <button type="submit">Sign Up</button>
+                </form>    
+                <h3>Already have an account? <a href="#">Log In</a></h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
